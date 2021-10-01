@@ -1,0 +1,143 @@
+@font-face {
+    font-family:Nature-Italic;
+    src: url('fonts/Lady\ Nature\ Font\ by\ 7NTypes\ Italic.otf')format('opentype');
+    
+}
+
+@font-face{
+    font-family: Nature;
+    src: url('fonts/Lady\ Nature\ Font\ by\ 7NTypes.otf')format('opentype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+    position: relative;
+    /* background-image: linear-gradient(180deg, #abe2e5, #def4c2, #ffcc42); */
+}
+
+.background-forest{
+    background-image: url('img/floresta.png');
+    position: relative;
+     width: 1368px;
+     height: 580px;
+     margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:bottom ;
+}
+
+.section-container{
+    position: relative;
+}
+
+/*divs para  o script*/
+
+
+#div-birds{
+    height:400px;
+    position:absolute;
+    top: 40;
+    right:0;
+    background-image: url('img/passaroVoando.gif');
+    opacity: 0;
+    width: 100%;
+}
+
+
+/*-----------*/
+
+
+header{
+    padding-top: 10px;
+    display:flex;
+    margin-left: 20px;
+    align-items: center;
+}
+
+button{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 150px;
+    height: 40px;
+    font-family: Nature-Italic;
+    font-size: 25px;
+    border-style: none;
+    border-radius: 15px;
+}
+
+.btn-birds:hover{
+    background: linear-gradient(180deg, #ccc5b9, #403d39, #463f3a);
+    color: white;
+    
+}
+
+.btn-morning:hover{
+    background: linear-gradient(180deg, #abe2e5, #def4c2, #ffcc42);
+    color: white;
+}
+
+.btn-afternoon:hover{
+    background: linear-gradient(180deg, #029199, #fbdcc0, #fe8034);
+    color: white;
+}
+
+.btn-night:hover{
+    background: linear-gradient(180deg, #03253f, #323c58, #ab84a4);
+    color: white;
+}
+
+
+.button-all{
+    margin-left:40px;
+    
+}
+
+h1{
+    font-family: Nature;
+    text-transform: uppercase;
+}
+
+
+/*script*/
+
+/*passaros*/
+
+.birds-toglle{
+    opacity: 1!important;
+    animation-name: fly;
+    animation-duration: 5s;   
+    animation-iteration-count: infinite;
+    animation-timing-function: 4s;
+    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
+    
+}
+@keyframes fly{
+    0%   {
+        right:-100%;
+    }
+    
+    100% {
+        right:120%; 
+    }
+    
+    }
+
+/*periodos do dia */
+
+.morning-toglle .section-container{
+    background-image: linear-gradient(180deg, #abe2e5, #def4c2, #ffcc42) ;
+}
+
+.afternoon-toglle .section-container{
+    background-image: linear-gradient(180deg, #029199, #fbdcc0, #fe8034);
+}
+
+.night-toglle .section-container {
+    background-image: linear-gradient(180deg, #03253f, #323c58, #ab84a4);
+}
